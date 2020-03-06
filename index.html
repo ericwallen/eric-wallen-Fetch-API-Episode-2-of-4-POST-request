@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.3/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.3/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.3/dist/js/uikit-icons.min.js"></script>
+</head>
+<body>
+
+    <h1 style="margin-left: 30px">Search Inventory</h1>
+    <div id="search-cars">
+        <button id="show-all-cars" class="uk-button uk-button-primary">Show All Cars</button>
+        
+        <select  id="type-of-earch" class="uk-select">
+            <option value="color">color</option>
+            <option value="model">model</option>
+            <option value="make">make</option>
+            <option value="vin">vin</option>
+        </select>
+
+        <input type="text" id="search-term" placeholder="make model color or vin" class="uk-input">
+
+        <button id="search" class="uk-button uk-button-primary">Search</button>
+    </div>
+
+    <div id="cars"></div>
+
+    <div id="message"></div>
+
+    <div id="sorry-gif"></div>
+
+    <form id="add-car">
+        <input type="text" class="uk-input" required id="year" placeholder="year">
+        <input type="text" class="uk-input" required id="make" placeholder="make">
+        <input type="text" class="uk-input" required id="model" placeholder="model">
+        <input type="text" class="uk-input" required id="color" placeholder="color">
+        <input type="text" class="uk-input" required id="vin" placeholder="vin">
+        <input type="text" class="uk-input" required id="photo" placeholder="photo">
+        <button class="uk-button uk-button-primary">Add Car</button>
+    </form>
+
+
+
+    <!-- 
+    year:
+    make:
+    model: 
+    color: 
+    vin: 
+    photo:  
+    -->
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+<style>
+    .car{
+        border: 2px solid #CCC;
+    }
+
+    #cars {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        margin: 30px;
+        text-align: center;
+    }
+
+
+    #search-cars {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 30px;
+        margin: 30px;
+        text-align: center;
+    }
+
+
+    #add-car {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        margin: 30px;
+        text-align: center;
+    }
+
+</style>
